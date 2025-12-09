@@ -1,0 +1,3 @@
+Versión 1.1.5
+
+- Actualización de la sintaxis para que sea compatible con la versión 1.1.5 del lenguaje Umbral.

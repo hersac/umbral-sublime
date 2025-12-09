@@ -1,0 +1,9 @@
+Gracias por instalar el paquete oficial de Umbral para Sublime Text.
+
+Incluye:
+- Resaltado de sintaxis
+- Archivos de ejemplo
+- Configuración para reconocer archivos .um
+
+Repositorio:
+https://github.com/heridev/umbral-sublime
