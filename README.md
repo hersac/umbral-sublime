@@ -1,9 +1,6 @@
-# Umbral Language Support for VS Code
+# Soporte de Lenguaje Umbral para Sublime Text
 
-[![Version](https://img.shields.io/visual-studio-marketplace/v/umbral.um)](https://marketplace.visualstudio.com/items?itemName=umbral.um)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/umbral.um)](https://marketplace.visualstudio.com/items?itemName=umbral.um)
-
-Extensión oficial de Visual Studio Code para el lenguaje de programación **Umbral**. Proporciona resaltado de sintaxis completo y soporte para el desarrollo con archivos `.um`.
+Paquete oficial de Sublime Text para el lenguaje de programación **Umbral**. Proporciona resaltado de sintaxis completo y soporte para el desarrollo con archivos `.um`.
 
 ## ✨ Características
 
@@ -29,18 +26,17 @@ Automáticamente reconoce archivos con extensión `.um` como código Umbral.
 
 ## 🚀 Instalación
 
-### Desde VS Code Marketplace
+### Instalación Manual
 
-1. Abre VS Code
-2. Ve a la vista de Extensiones (`Ctrl+Shift+X` / `Cmd+Shift+X`)
-3. Busca "Umbral"
-4. Haz clic en "Install"
-
-### Desde VSIX
+1. Abre Sublime Text.
+2. Ve al menú `Preferences` > `Browse Packages...`.
+3. En la carpeta que se abre, abre una terminal y clona este repositorio:
 
 ```bash
-code --install-extension um-*.vsix
+git clone https://github.com/tu-usuario/umbral-sublime.git Umbral
 ```
+
+4. Reinicia Sublime Text (opcional, generalmente detecta el cambio automáticamente).
 
 ## 📝 Ejemplo de Sintaxis
 
@@ -111,33 +107,6 @@ v: literal = 'Sin interpolación &nombre';
 - **Módulos**: Sistema `equip`/`origin` para importar/exportar
 - **Tipos Primitivos**: Int, Str, Flo, Bool, Void
 
-## 🛠️ Desarrollo
-
-### Requisitos
-
-- Node.js y npm
-- Visual Studio Code
-- vsce (VS Code Extension Manager)
-
-### Clonar y Configurar
-
-```bash
-git clone <repository-url>
-cd um
-npm install
-```
-
-### Generar VSIX
-
-```bash
-vsce package
-```
-
-### Probar Localmente
-
-1. Presiona `F5` en VS Code para abrir una ventana de desarrollo
-2. Abre un archivo `.um` para ver el resaltado de sintaxis
-
 ## 📄 Licencia
 
 Este proyecto está bajo la licencia especificada en el archivo LICENSE.
@@ -154,7 +123,7 @@ Las contribuciones son bienvenidas. Por favor:
 
 ## 📞 Soporte
 
-- **Issues**: [GitHub Issues](https://github.com/tu-usuario/um/issues)
+- **Issues**: [GitHub Issues](https://github.com/tu-usuario/umbral-sublime/issues)
 - **Documentación**: [Umbral Docs](https://umbral-lang.dev)
 
 ---
