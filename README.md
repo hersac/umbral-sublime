@@ -33,7 +33,7 @@ Automáticamente reconoce archivos con extensión `.um` como código Umbral.
 3. En la carpeta que se abre, abre una terminal y clona este repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/umbral-sublime.git Umbral
+git clone https://github.com/hersac/umbral-sublime.git Umbral
 ```
 
 4. Reinicia Sublime Text (opcional, generalmente detecta el cambio automáticamente).
@@ -123,7 +123,7 @@ Las contribuciones son bienvenidas. Por favor:
 
 ## 📞 Soporte
 
-- **Issues**: [GitHub Issues](https://github.com/tu-usuario/umbral-sublime/issues)
+- **Issues**: [GitHub Issues](https://github.com/hersac/umbral-sublime/issues)
 - **Documentación**: [Umbral Docs](https://umbral-lang.dev)
 
 ---

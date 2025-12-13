@@ -1,0 +1,118 @@
+%YAML 1.2
+---
+name: Umbral
+file_extensions:
+  - um
+scope: source.umbral
+
+variables:
+  ident: "[a-zA-Z_][a-zA-Z0-9_]*"
+
+contexts:
+  main:
+    - include: comments
+    - include: strings
+    - include: keywords
+    - include: declarations
+    - include: modifiers
+    - include: operators
+    - include: types
+    - include: values
+    - include: punctuation
+    - include: functions
+
+  comments:
+    - match: "!!.*$"
+      scope: comment.line.double-exclamation.umbral
+
+  strings:
+    - match: "'''"
+      push: string_triple
+    - match: "'"
+      push: string_single
+    - match: '"'
+      push: string_double
+
+  string_triple:
+    - meta_scope: string.quoted.triple.umbral
+    - match: "'''"
+      pop: true
+    - include: string_escapes
+    - include: string_interpolation
+
+  string_single:
+    - meta_scope: string.quoted.single.umbral
+    - match: "'"
+      pop: true
+    - include: string_escapes
+
+  string_double:
+    - meta_scope: string.quoted.double.umbral
+    - match: '"'
+      pop: true
+    - include: string_escapes
+    - include: string_interpolation
+
+  string_escapes:
+    - match: \\.
+      scope: constant.character.escape.umbral
+
+  string_interpolation:
+    # &variable or &object.property or &func()
+    - match: '&{{ident}}((\.{{ident}})|(\([^\)]*\))|(\[[^\]]*\]))*'
+      scope: constant.character.escape.umbral
+
+  keywords:
+    - match: '\b(i|ie|e|wh|r|th|n|out|equip|origin|as)\b'
+      scope: keyword.control.umbral
+    - match: '\b(sw|ca|def):'
+      scope: keyword.control.switch.umbral
+    - match: '\b(ext|imp|in):'
+      scope: keyword.other.oop.umbral
+
+  declarations:
+    - match: '\b(v|c|f|fo|fe|cs|pr|pu):'
+      scope: keyword.declaration.umbral
+
+  modifiers:
+    - match: '\b(pu|pr)\b'
+      scope: storage.modifier.umbral
+
+  operators:
+    - match: '(->|\+|\-|\*|\/|%|==|!=|<=|>=|<|>|&&|\|\||!|=)'
+      scope: keyword.operator.umbral
+    - match: "&(?![a-zA-Z_])"
+      scope: keyword.operator.spread.umbral
+
+  types:
+    - match: '\b(Int|Str|Flo|Bool|Void)\b'
+      scope: support.type.primitive.umbral
+    - match: '\[\]\[\]'
+      scope: support.type.array.umbral
+    - match: '\[\]'
+      scope: support.type.array.umbral
+
+  values:
+    - match: '\b[0-9]+(\.[0-9]+)?\b'
+      scope: constant.numeric.umbral
+    - match: '\b(true|false)\b'
+      scope: constant.language.boolean.umbral
+
+  punctuation:
+    - match: '[\{\}]'
+      scope: punctuation.definition.block.umbral
+    - match: '[\[\]]'
+      scope: punctuation.definition.array.umbral
+
+  functions:
+    # Function definition or call: name(
+    - match: '({{ident}})\.({{ident}})(?=\s*\()'
+      captures:
+        1: variable.other.object.umbral
+        2: entity.name.function.umbral
+    - match: '\b({{ident}})(?=\s*\()'
+      scope: entity.name.function.umbral
+    - match: '\b(tprint)\b'
+      scope: support.function.builtin.umbral
+    - match: '\.length\b'
+      scope: support.variable.property.umbral
