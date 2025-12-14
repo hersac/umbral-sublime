@@ -1,3 +1,0 @@
-v: x = 10;
-tprint('Valor: ');
-tprint(x);
