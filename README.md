@@ -11,13 +11,17 @@ Paquete oficial de Sublime Text para el lenguaje de programación **Umbral**. Pr
   - `'texto literal'` - String sin interpolación
   - `"texto con &variable"` - String con interpolación
   - `'''texto multilínea con &interpolacion'''`
-- **Palabras Clave**: `i`, `e`, `wh`, `r`, `th`, `n`, `out`, `equip`, `origin`, `as`
-- **Declaradores**: `v:`, `c:`, `f:`, `cs:`, `pr:`, `pu:`
-- **Tipos de Datos**: `Int`, `Str`, `Flo`, `Bool`, `Void`, `[]`, `[][]`
+- **Palabras Clave de Control**: `i`, `ie`, `e`, `wh`, `r`, `th`, `n`, `out`, `equip`, `origin`, `as`
+- **Control Condicional**: `sw:` (switch), `ca:` (case), `def:` (default)
+- **Manejo de Errores**: `tr:` (try), `ct:` (catch), `tw:` (throw), `fy:` (finally)
+- **Declaradores**: `v:`, `c:`, `f:`, `fo:`, `fe:`, `cs:`, `pr:`, `pu:`
+- **Modificadores OOP**: `ext:` (extends), `imp:` (implements), `in:` (interface)
+- **Tipos de Datos**: `Int`, `Str`, `Flo`, `Bool`, `Void`, `Error`, `[]`, `[][]`
 - **Operadores**: `->`, `+`, `-`, `*`, `/`, `%`, `==`, `!=`, `<=`, `>=`, `<`, `>`, `&&`, `||`, `!`, `=`
 - **Operador Spread**: `&array` para expandir arrays
 - **Números y Booleanos**: `42`, `3.14`, `true`, `false`
 - **Funciones Built-in**: `tprint`
+- **Propiedades**: `.length` y otras propiedades de objetos
 - **Invocaciones**: Resaltado de llamadas a funciones y métodos
 
 ### 📦 Reconocimiento de Archivos
@@ -97,15 +101,18 @@ v: literal = 'Sin interpolación &nombre';
 ## 🎯 Características del Lenguaje Umbral
 
 - **Variables**: `v:` (mutables) y `c:` (constantes)
-- **Funciones**: `f:` con tipos explícitos y retornos
+- **Funciones**: `f:` con tipos explícitos y retornos, `fo:` y `fe:` para funciones especiales
 - **Clases**: `cs:` con propiedades (`pr:`) y métodos públicos (`pu:`)
-- **Condicionales**: `i:` (if), `e:` (else)
+- **Condicionales**: `i:` (if), `ie:` (else if), `e:` (else)
+- **Switch-Case**: `sw:` (switch), `ca:` (case), `def:` (default)
+- **Manejo de Errores**: `tr:` (try), `ct:` (catch), `tw:` (throw), `fy:` (finally)
 - **Bucles**: `wh:` (while)
 - **Arrays**: `{1, 2, 3}` con tipos `[]Int`, `[][]Int`
 - **Interpolación**: `&variable` en strings y triple comillas
 - **Operador Spread**: `&array` para expandir arrays
 - **Módulos**: Sistema `equip`/`origin` para importar/exportar
-- **Tipos Primitivos**: Int, Str, Flo, Bool, Void
+- **OOP Avanzado**: `ext:` (extends), `imp:` (implements), `in:` (interface)
+- **Tipos Primitivos**: Int, Str, Flo, Bool, Void, Error
 
 ## 📄 Licencia
 

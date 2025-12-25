@@ -65,8 +65,8 @@ contexts:
   keywords:
     - match: '\b(i|ie|e|wh|r|th|n|out|equip|origin|as)\b'
       scope: keyword.control.umbral
-    - match: '\b(sw|ca|def):'
-      scope: keyword.control.switch.umbral
+    - match: '\b(sw|ca|def|tr|ct|tw|fy):'
+      scope: keyword.control.conditional.umbral
     - match: '\b(ext|imp|in):'
       scope: keyword.other.oop.umbral
 
@@ -85,7 +85,7 @@ contexts:
       scope: keyword.operator.spread.umbral
 
   types:
-    - match: '\b(Int|Str|Flo|Bool|Void)\b'
+    - match: '\b(Int|Str|Flo|Bool|Void|Error)\b'
       scope: support.type.primitive.umbral
     - match: '\[\]\[\]'
       scope: support.type.array.umbral
