@@ -67,6 +67,8 @@ contexts:
       scope: keyword.control.umbral
     - match: '\b(sw|ca|def|tr|ct|tw|fy):'
       scope: keyword.control.conditional.umbral
+    - match: '\b(awa)\b'
+      scope: keyword.control.flow.await.umbral
     - match: '\b(ext|imp|in):'
       scope: keyword.other.oop.umbral
 
@@ -75,6 +77,8 @@ contexts:
       scope: keyword.declaration.umbral
 
   modifiers:
+    - match: '\b(asy)\b'
+      scope: storage.modifier.async.umbral
     - match: '\b(pu|pr)\b'
       scope: storage.modifier.umbral
 

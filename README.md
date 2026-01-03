@@ -14,6 +14,7 @@ Paquete oficial de Sublime Text para el lenguaje de programación **Umbral**. Pr
 - **Palabras Clave de Control**: `i`, `ie`, `e`, `wh`, `r`, `th`, `n`, `out`, `equip`, `origin`, `as`
 - **Control Condicional**: `sw:` (switch), `ca:` (case), `def:` (default)
 - **Manejo de Errores**: `tr:` (try), `ct:` (catch), `tw:` (throw), `fy:` (finally)
+- **Asincronismo**: `asy` (async), `awa` (await)
 - **Declaradores**: `v:`, `c:`, `f:`, `fo:`, `fe:`, `cs:`, `pr:`, `pu:`
 - **Modificadores OOP**: `ext:` (extends), `imp:` (implements), `in:` (interface)
 - **Tipos de Datos**: `Int`, `Str`, `Flo`, `Bool`, `Void`, `Error`, `[]`, `[][]`
@@ -106,6 +107,7 @@ v: literal = 'Sin interpolación &nombre';
 - **Condicionales**: `i:` (if), `ie:` (else if), `e:` (else)
 - **Switch-Case**: `sw:` (switch), `ca:` (case), `def:` (default)
 - **Manejo de Errores**: `tr:` (try), `ct:` (catch), `tw:` (throw), `fy:` (finally)
+- **Asincronismo**: `asy` (async), `awa` (await)
 - **Bucles**: `wh:` (while)
 - **Arrays**: `{1, 2, 3}` con tipos `[]Int`, `[][]Int`
 - **Interpolación**: `&variable` en strings y triple comillas
